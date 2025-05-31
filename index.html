@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz Cumple bestie 💖💐</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarjeta de Cumpleaños</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      background-color: #aec6cf;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+
+    #mostrarTarjeta {
+      padding: 15px 30px;
+      background-color: #AEC6CF;
+      border: none;
+      border-radius: 12px;
+      color: rgb(17, 17, 17);
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    #mostrarTarjeta:hover {
+      background-color: #faf8f8b4;
+    }
+
+    .birthdayCard {
+      display: none; /* Oculta la tarjeta al inicio */
+    }
+  </style>
+</head>
+<body>
+<!-- Botón visible inicialmente -->
+<button id="mostrarTarjeta"> ✨ Haz clic ✨</button>
+
+<!-- Audio oculto -->
+<audio id="birthdaySong" style="display: none;">
+  <source src="adore-you.mp3.mp3" type="audio/mp3">
+
+</audio>
+
+<!-- Script para reproducir audio -->
+<script>
+  document.getElementById("mostrarTarjeta").addEventListener("click", function() {
+    const audio = document.getElementById("birthdaySong");
+    audio.play();
+  });
+</script>
+
+
+  <!-- Tarjeta que aparece después del clic -->
+  <div class="birthdayCard" id="tarjeta">
+    <div class="cardFront">
+      <h3 class="happy">HAPPY BIRTHDAY</h3>
+      <div class="balloons">
+        <div class="balloon-1"></div>
+        <div class="balloon-2"></div>
+        <div class="balloon-3"></div>
+        <div class="balloon-4"></div>
+        <div class="balloon-5"></div>
+        <div class="balloon-6"></div>
+        <div class="balloon-7"></div>
+      </div>
+    </div>
+    <div class="cardInside">
+      <h3 class="back">HAPPY BIRTHDAY SWEETIE💐✨</h3>
+      <p>Para fer,</p>
+      <p>
+        Feliz cumpleaños mi niña preciosa 💖 ya oficialmente 23 omg que 
+         rápido crecen 😭, esperó que en este día tan especial te la 
+         pases súper bien, agradecida de que formes parte de mi vida, de 
+         las mejores personas que he conocido, ya 3 añotes de eso y esperó 
+         que sean muchos más, siempre deseando lo mejor para vos 🫶🏻
+         love u corazón de melón ✨💗.
+
+      </p>
+      <p class="pao">xoxo</p>
+    </div>
+  </div>
+
+  <!-- JS para cambiar vista -->
+  <script>
+    document.getElementById("mostrarTarjeta").addEventListener("click", function() {
+      // Oculta el botón
+      this.style.display = "none";
+
+      // Muestra la tarjeta
+      document.getElementById("tarjeta").style.display = "block";
+    });
+  </script>
+</body>
+</html>
+    
+  <script src="script.js"></script>
+  <!-- Confetti script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  document.addEventListener('click', () => {
+    confetti({
+      particleCount: 150,
+      spread: 100,
+      origin: { y: 0.6 }
+    });
+  });
+</script>
+
+</body>
+</html>
